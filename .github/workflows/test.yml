@@ -1,1 +1,18 @@
-test file
+name: "this is a test file"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: printing message.
+        run: echo "...initializing the git content"
+      - name: checking python version.
+        run: python --version
+      - name: checking docker version
+        run: docker --version
